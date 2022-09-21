@@ -14,6 +14,11 @@
                     <i class="nav-icon fas fa-th-list"></i>Категории
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('admin.tag.index')}}" class="nav-link">
+                    <i class="nav-icon fas fa fa-tags"></i>Тэги
+                </a>
+            </li>
         </ul>
     </div>
 </aside>
