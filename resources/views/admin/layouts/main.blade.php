@@ -18,6 +18,7 @@
     <!-- JQVMap -->
     <link rel="stylesheet" href={{asset("plugins/jqvmap/jqvmap.min.css")}}>
     <!-- Theme style -->
+    <link rel="stylesheet" href={{asset("plugins/select2/css/select2.min.css")}}>
     <link rel="stylesheet" href={{asset("dist/css/adminlte.min.css")}}>
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href={{asset("plugins/overlayScrollbars/css/OverlayScrollbars.min.css")}}>
@@ -81,6 +82,8 @@
 <script src={{asset("plugins/daterangepicker/daterangepicker.js")}}></script>
 <!-- overlayScrollbars -->
 <script src={{asset("plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js")}}></script>
+<script src={{asset("plugins/bs-custom-file-input/bs-custom-file-input.min.js")}}></script>
+<script src={{asset("plugins/select2/js/select2.full.min.js")}}></script>
 <!-- AdminLTE App -->
 <script src={{asset("dist/js/adminlte.js")}}></script>
 <script>
@@ -98,6 +101,10 @@
             }
         );
     });
+    $(function () {
+        bsCustomFileInput.init();
+    });
+    $('.select2').select2()
 </script>
 </body>
 </html>
