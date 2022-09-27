@@ -9,7 +9,7 @@ use App\Models\Post;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
-class DeleteController extends Controller
+class DeleteController extends BaseController
 {
     public function __invoke(Post $post)
     {
