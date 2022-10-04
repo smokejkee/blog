@@ -12,21 +12,7 @@ class UpdateController extends BaseController
     public function __invoke(UpdateRequest $request, Post $post)
     {
         $data = $request->validated();
-        if(isset($data['tag_ids'])) {
-            $tagIds = $data['tag_ids'];
-            unset($data['tag_ids']);
-        }
-
-        if(isset($data['preview_image'])) {
-            $data['preview_image'] = Storage::disk('public')->put('/images', $data['preview_image']);
-        }
-        if(isset($data['main_image'])) {
-            $data['main_image'] = Storage::disk('public')->put('/images', $data['main_image']);
-        }
-        $post->update($data);
-        if(isset($tagIds)) {
-            $post->tags()->sync($tagIds);
-        }
+        $this->service->update($data, $post);
         return view('admin.post.show', compact('post'));
     }
 }

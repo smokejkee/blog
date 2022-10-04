@@ -10,6 +10,11 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="{{route('admin.user.index')}}" class="nav-link">
+                    <i class="nav-icon fa fa-user"></i>Пользователи
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="{{route('admin.post.index')}}" class="nav-link">
                     <i class="nav-icon fa fa-sticky-note"></i>Посты
                 </a>
